@@ -1,0 +1,41 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:rich="http://richfaces.org/rich">
+      
+   <h:form>
+      <rich:extendedDataTable value="#{userData.employees}" var="employee"
+         styleClass="employeeTable"
+         headerClass="employeeTableHeader"
+         rowClasses="employeeTableOddRow,employeeTableEvenRow">
+         
+          <rich:column id="header" >
+                <f:facet name="header">
+                    <h:outputText value="name"/>
+                </f:facet>
+                <h:outputText value="#{employee.name}"/>
+          </rich:column>
+          <rich:column id="department" >
+                <f:facet name="header">
+                    <h:outputText value="department"/>
+                </f:facet>
+                <h:outputText value="#{employee.department}"/>
+          </rich:column>
+          <rich:column id="age" >
+                <f:facet name="header">
+                    <h:outputText value="age"/>
+                </f:facet>
+                <h:outputText value="#{employee.age}"/>
+          </rich:column>
+          <rich:column id="salary" >
+                <f:facet name="header">
+                    <h:outputText value="salary"/>
+                </f:facet>
+                <h:outputText value="#{employee.salary}"/>
+          </rich:column>
+         
+      </rich:extendedDataTable>
+   </h:form>
+</ui:composition>
