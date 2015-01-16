@@ -2,4 +2,4 @@
 
 http://www.tutorialspoint.com/jsf/jsf_display_datatable.htm
 
-update with jsf2.2
+update with jsf2.2 and css
